@@ -4,4 +4,6 @@
 
 ### 2.[Vimperator](doc/Vimperator.md)   
 
-### 3.[Junit测试](doc/Junit.md)
+### 3.[Junit测试](doc/Junit.md)   
+
+### 4.[IntelliJ IDEA](doc/idea.md)  
