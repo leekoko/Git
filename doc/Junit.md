@@ -1,43 +1,99 @@
 # Junit      
 
-### 1.Junit的使用  
+### Junit概述   
 
-1. Junit使用首先要导入Junit的jar包
+M：什么是单元测试呢？
 
-右键项目--Build Path--Add Libraries--Junit--选择Junit 4点击确定。  
+D：单元测试是开发人员编写的小段代码，属于白盒测试，最受益的是开发人员。
 
-2. 新建测试类    
+M：白盒测试是什么呢？
 
-右键项目--新建Junit Test Case：创建测试方法的模板    
+Z：像开发人员很清楚程序内部逻辑，对程序做的测试叫做白盒测试。
 
-3. 根据模板编写测试方式  
+M：那黑盒测试是什么？
 
-```java
-	@Test
-	public void test() {
-		assertEquals(6, new Calculate().add(2, 4));
-	}
-```
+Z：像测试人员，不知道代码逻辑，直接从暴露的功能上进行的测试。就像对黑盒子进行测试。
 
-使用assertEquals，表示对两个的结果进行对比  
+M：类不是可以直接用main方法进行调用运行来测试吗？为什么非要用到Junit
 
-右键 run as--Junit Test进行运行，如果Junit窗口出现绿条说明测试通过，红色则表示测试失败。   
+Z：因为一个类中有很多个方法，而main只能对应一个方法进行测试，相对的Junit则可以写多个测试方法。   
 
-  ![](../images/10.png)  
+M：Junit中``Assert.assertEquals(52,result);``这段代码有什么用？
 
-（Failures：表示程序输出结果与预期的不一样。Error：表示代码本身的错误或者bug）  
+Z：自动判断实际值和期待值是否一样，不用人为进行判断。
 
-### 2.新建测试方法的规范  
+M：如果我们测试有很多个，那不是很分散，有什么办法把他们组合起来吗？
+
+Z：``Suite.class``可以将各个测试类组织起来，形成一个树状结构
+
+![](../imgs/junitA01.png)  
+
+M：为什么单元测试那么重要？
+
+Z：单元测试相当于文档的作用，让我们从使用者的角度来看代码，所以单元测试需要随着代码同步维护。
+
+### 断言  
+
+M：检查结果对不对的代码还有哪些？
+
+Z：在Junit中叫做断言，常用的断言有：
+
+1. ``Assert.assertEquals(expected,actual);``  判断值/对象是否相同   
+2. ``Assert.assertTrue(condition);``   判断值是否为true  
+3. ``Assert.assertNotNull(object);``  判断对象是否非空   
+4. ``Assert.assertArrayEquals(expecteds,actuals);``  判断数组是否相等   
+
+Z：有一些异常是必须要出现的，如果输入一些非法值，而程序不出现异常，继续运行下去则可能会破坏数据。所以还有一种测试是测试，输入非法值的时候，程序是否会抛出异常。
+
+这种测试就是简单的try{}catch{}语句，然后在后面添加``Assert.fail()``语句，表示如果顺利跑到该位置（捕捉不到异常），Junit直接报错。   
+
+### 注解  
+
+M：除了``@Test``,还有``@Before``&``@After``,它们是干嘛用的？
+
+Z：调用每个``@Tets``的方法时候， 都会在其测试方法前后执行。   
+
+M：``BeforeClass``&``AfterClass``和``@Before``&``@After``之间有什么区别？
+
+Z：``@Before``&``@After``是相对于一个方法的前后，而``BeforeClass``&``AfterClass``是相对于整个类的前后。
+
+M：``BeforeClass``&``AfterClass``一般用在什么情况下呢？
+
+Z：``BeforeClass``在方法调用前执行。是静态的，适合加载配置文件
+
+​	``AfterClass``所有方法执行后执行，用来资源清理，如关闭数据库连接  
+
+### Mock对象
+
+M：Mock对象有什么作用？
+
+Z：有些对象难以构造，可能依赖于某些容器。像HttpServlet只在Tomcat中等。而Mock就是模拟出这些对象，替代对象来保证被测试方法的正常运行。     
+
+M：有什么使用Demo呢？
+
+Z： 以下为暂时的图片，后期实际编码的时候再替换代码!!!!!!!!!!!!!!!!!!!loading
+
+![](temp1.png)  
+
+M：实际使用场景有吗？
+
+Z： 以下为暂时的图片，后期实际编码的时候再替换代码!!!!!!!!!!!!!!!!!!!!loading 
+
+![](temp2.png)   
+
+刘欣：强烈推荐书《修改代码的艺术》
+
+### Junit的使用规范  
 
 一般我们测试类是放在一个新的文件夹里面，一旦项目完成，直接删除并且不会影响项目本身。  
 
 1. 所以现在项目下新建一个test文件夹   
 
-![](../images/11.png)  
+![](../imgs/11.png)    
 
 2. 然后右键项目--新建Junit Test Case，修改类的目录位置为test，点击next，选择要测试的方法名打勾，点击finish就能自动生成测试方法。  
 
-![](../images/12.png)  
+![](../imgs/12.png)    
 
 3. 这里还有一些命名上的规范  
 
@@ -47,84 +103,48 @@
 
 类名后面添加Test，方法名前面添加test   
 
-### 3.注解的介绍  
+### Junit的Demo  
 
-#### 1.@BeforeClass  
+M：有没有相关的使用Demo流程呢？
 
-所以方法调用前执行。是静态的，适合加载配置文件  
+Z：
 
-#### 2.@AfterClass  
+1. pom中添加依赖
 
-所有方法执行后执行，用来资源清理，如关闭数据库连接  
+   ```xml
+   	    <dependency>
+   	        <groupId>org.mockito</groupId>
+   	        <artifactId>mockito-all</artifactId>
+   	        <version>2.0.2-beta</version>
+   	    </dependency>
+   ```
 
-#### 3.@Before&@After   
+2. junit中引入静态包方法``import static org.mockito.Mockito.*;``   
 
-每个测试方法前后执行   
+3. 简单案例
 
-#### 4.@Test  
+   ```java
+   	@Test
+   	public void testInitCurYear(){
+           /* 创建 Mock 对象 */
+           List list = mock(List.class);
+           /* 设置预期，当调用 get(0) 方法时返回 "111" */
+           when(list.get(0)).thenReturn("111");
 
-1. expected属性  
+           Assert.assertEquals("asd", 1, 1);
+           /* 设置后返回期望的结果 */
+           System.out.println(list.get(0));
+           /* 没有设置则返回 null */
+           System.out.println(list.get(1));
 
-当@Test下的方法有异常，我们不想让其抛出，需要用``(expected=ArithmeticException.class)``来捕获ArithmeticException异常    
+           /* 验证返回结果 */
+           String ret = (String)list.get(0);
+           Assert.assertEquals(ret, "111");
+   		
+   	}
+   ```
 
-2. timeout属性  
-
-当程序死循环，为了保证系统不奔溃，定时关闭程序，也可以作为性能测试  
-
-``(timeout=2000)``  
-
-#### 5.@Ignore  
-
-测试的时候忽略@Ignore("注释:为什么没有执行")的方法  
-
-#### 6.@RunWith  
-
-更改测试运行器，一般使用默认的就可以完成   
-
-**1.测试套件**  
-
-测试套件就是将多个测试类一起运行，测试运行器为Suite.class,将测试类作为数组传入Suite.SuiteClasses中  
-
-```java
-@RunWith(Suite.class)
-@Suite.SuiteClasses({CalculateTest_2.class,CalculateTest_3.class})
-public class CalculateTest {
-}
-```
-
-**参数化设置**  
-
-1. 设置运行器  
-2. 生命多组预期值&结果值，其返回值为Collection的静态方法，用@Parameters修饰    
-3. 为测试类编写构造方法并赋值，编写测试方法  
-
-```java
-@RunWith(Parameterized.class)
-public class ParameterTest {
-	int expected=0;
-	int input1=0;
-	int input2=0;
-	
-	@Parameters
-	public static Collection<Object[]> t(){
-		return Arrays.asList(new Object[][]{
-			{3,1,2},
-			{4,2,3}
-		});
-	}
-	
-	public ParameterTest(int expected,int input1,int input2){
-		this.expected=expected;
-		this.input1=input1;
-		this.input2=input2;
-	}
-	
-	@Test
-	public void testAdd(){
-		assertEquals(expected, new Calculate().add(input1, input2));
-	}
-}
-```
+   ​
 
 
 
@@ -134,3 +154,26 @@ public class ParameterTest {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+理解temp1，temp2知识点
