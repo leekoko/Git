@@ -6,4 +6,7 @@
 
 ### 3.[Junit测试](doc/Junit.md)   
 
-### 4.[IntelliJ IDEA](doc/idea.md)  
+### 4.[IntelliJ IDEA](doc/idea.md)     
+
+### 5.[Kettle](doc/Kettle.md)  
+
