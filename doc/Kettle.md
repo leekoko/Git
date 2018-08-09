@@ -64,7 +64,7 @@
 
    ![](../imgs/kettleA11.png)   
 
-   ![img](file:///D:/github_place/itTools/imgs/kettleA12.png?lastModify=1533261337)尝试去掉允许简易转换，再进行预览
+   尝试去掉允许简易转换，再进行预览
 
    ![](../imgs/kettleA12.png)   
 
