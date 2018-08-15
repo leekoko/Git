@@ -150,9 +150,11 @@ M：怎么在打开的项目的项目之间切换
 
 Z：Alt+←/→ ，前进后退导航Ctrl + Alt + ←/→   
 
-M：怎么全局搜索呢？
+M：怎么全局搜索文字呢？
 
-Z：Ctrl + N搜索文件，Ctrl + Shift + N搜索文件夹，Alt+F7(+Fn)搜索文字，Ctrl + Shift + F搜索文字并显示代码详情。
+Z：Ctrl + Shift + F搜索文字并显示代码详情。
+
+![](../imgs/id60.png)  
 
 M：为什么我按Ctrl + Shift + F搜索不到？
 
