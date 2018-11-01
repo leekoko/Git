@@ -142,6 +142,14 @@ Z：在发布项目的时候，静态资源也要指定发布，并且添加访�
 
 ![](D:\github_place\itTools\imgs\id59.png)  
 
+## idea管理数据库   
+
+M：idea怎么添加管理数据库呢？
+
+Z：直接添加即可
+
+![](../imgs/id61.png)      
+
 
 
 ------
