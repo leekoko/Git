@@ -114,6 +114,16 @@ Z：方法和普通tomcat部署没有太大区别
 
    ![](D:\github_place\itTools\imgs\id57.png)  
 
+M：怎么进行加速呢？
+
+Z：指定热部署的模块  
+
+![](..\imgs\id62.png)
+
+删除Build
+
+
+
 M：我启动之后报错，``HTTP Status 500 - Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): cn.leekoko.mapper.OnlinecontentMapper.selectByExample``是怎么回事呢？
 
 Z：新版IntelliJ IDEA不会自动编译source folder下的xml文件，如果要实现编译，需要在其pom.xml中添加以下代码
@@ -149,6 +159,14 @@ M：idea怎么添加管理数据库呢？
 Z：直接添加即可
 
 ![](../imgs/id61.png)      
+
+## 问题
+
+M：为什么maven引入的包使用不了？
+
+Z：看一下pom.xml文件是否能进入引入的jar包pom中。如果不能进入，可能是前面的引入出现了问题，导致后面没法正常引入。
+
+
 
 
 
