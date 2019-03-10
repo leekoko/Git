@@ -1,4 +1,4 @@
-# 语法
+# 集合
 
 ## 集合1
 
@@ -36,7 +36,7 @@ Z:Collection接口是所有集合的根，展开三类集合：
 
 - List	有序集合
 - Set 不允许重复元素
-  - TreeSet的特性 顺序访问，但添加删除操作低效
+  - TreeSet的特性 顺序访问，但添加删除操作低效。基于TreeMap实现。
   - HashSet的特性 无序，添加删除操作如常数时间，遍历性能与底层HashMap容量有关。
   - LinkedHashSet 有序，添加删除操作如常数时间，因维护链表性能略低HashSet，遍历性能以元素多少有关
 - Queue 先入先出，后入后出，常用于并发编程场景
@@ -56,6 +56,35 @@ Java8提供并行排序算法，利用多核处理器的计算能力，主要针
 
 M：**对比 Hashtable、HashMap、TreeMap 有什么不同？**  
 
+Z：相同点，三者都是Map实现，键值对形式存储和操作数据
 
+Z：不同点
 
-https://time.geekbang.org/column/article/8053
+### Map1.Hashtable
+
+Hashtable同步的，性能开销，不支持null的键值
+
+结构：扩展了Dictionary 类，与扩展AbstractMap的HashMap，TreeMap结构大有不同。
+
+### Map2.HashMap
+
+HashMap非同步的，支持null的键值
+
+结构：数组+链表，哈希值决定数组的寻址，哈希值相同的键对，以链表存储。
+
+线程安全：本身非线程安全，可以利用``Collections.synchronizedMap(new HashMap());``实现线程安全
+
+LinkedHashMap遍历顺序符合插入顺序，通过维护双向链表实现。特定场景：可以定义删除策略，将不常用对象释放掉。
+
+### Map3.TreeMap
+
+TreeMap有序的，顺序基于红黑树算法，操作数据是O(log(n))的时间复杂度，可以通过Comparator定制顺序，也可以Comparable自然顺序
+
+### 哈希冲突
+
+M：怎么解决哈希冲突呢？
+
+Z：解决方式其中两种：
+
+- 开放地址法：当关键字key的哈希地址冲突时，产生新的哈希地址，一直到不冲突为止
+- 建立溢出表：当基础表冲突的元素，填入溢出表中
