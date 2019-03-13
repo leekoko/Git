@@ -74,6 +74,11 @@ Fruit fruit = apple ;是超类
 
 多态仅对方法有效：fruit.print();调用的方法是apple类的方法，而fruit.name的成员变量则是Fruit类的成员变量
 
+fruit.setDate(new Date());如果有参数且参数不一样，则不构成多态，调用的还是父类fruit方法
+
+### abstract
+
+abstract的用法：模板方法，在abstract类中定义方法名的估计，子类extends父类，实现该方法。
 
 
 
@@ -81,8 +86,7 @@ Fruit fruit = apple ;是超类
 
 
 
-
-热身2	18:46
+热身2	23:00
 
 
 
