@@ -1,4 +1,4 @@
-# 字符串
+# 理解 Java 的字符串，String、StringBuffer、StringBuilder 有什么区别？
 
 M：理解 Java 的字符串，String、StringBuffer、StringBuilder 有什么区别？
 
