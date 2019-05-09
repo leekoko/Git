@@ -8,7 +8,7 @@
 
 重新梳理一下单元测试部分，以便日后工作更加熟悉地使用。
 
-### [Kettle](doc/Kettle.md)
+### [Kettle](docs/Kettle.md)  
 
 Kettle作为一个很方便的数据迁移工具，这里整理一下用法。
 
@@ -30,7 +30,7 @@ Kettle作为一个很方便的数据迁移工具，这里整理一下用法。
 
 ### 9.[ionic](doc/ionic.md)  
 
-### 10.[面试](InterView/readme.md)  
+### 10.[面试](InterView/readme.md)    
 
 
 

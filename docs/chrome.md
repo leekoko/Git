@@ -45,19 +45,19 @@ $i是用来运行npm插件的，需要配合[Console Importer](https://chrome.go
 
 可以用在多个循环中，调试某个循环
 
-![](imgs/c01.gif)  
+![](../imgs/c01.gif)  
 
 #### 插入调试信息
 
 在源码中可以添加 `console.log` / `console.table` / `console.time` 查看调试信息，也可以通过条件断点添加，方法如下
 
-![](imgs/c02.gif)  
+![](../imgs/c02.gif)  
 
 ### 对象
 
 在控制台对对象打印可以使用``queryObject(Person)``,保存成变量之后通过``console.table(temp2)``可以将变量列出
 
-   ![](imgs/c03.gif)  
+   ![](../imgs/c03.gif)  
 
 #### console打印对象  
 
@@ -65,7 +65,7 @@ $i是用来运行npm插件的，需要配合[Console Importer](https://chrome.go
 
 如果打印的列太多，也可以通过以下方法进行筛选：
 
-![](imgs/c04.gif)  
+![](../imgs/c04.gif)  
 
 可以两者结合，组成``console.table({值1，值2...})``  
 
@@ -84,17 +84,17 @@ $i是用来运行npm插件的，需要配合[Console Importer](https://chrome.go
 
 点击👁图标，可以实时插入任何js代码，并且不断执行
 
-![](imgs/c05.gif)
+![](../imgs/c05.gif)
 
 ### Network
 
 Network面板使用的小技巧，可以查看调用的对堆栈：
 
-![](imgs/c06.gif)  
+![](../imgs/c06.gif)  
 
 可以过滤请求的属性，例如`method` 或者 `mime-type` :
 
-![](imgs/c07.gif)  
+![](../imgs/c07.gif)  
 
 ## DOM节点
 
