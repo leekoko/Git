@@ -127,38 +127,16 @@
 
 ![](../imgs/k06.png)  
 
-loading
+#### 5.JavaScript代码-处理日期格式
 
+```javascript
+//Script here
+var SYSTEM_DATE = date2str(DATE,"yyyy-MM-dd HH:mm:ss")
 
+var SYSTEM_DATE2 = date2str(DATE2,"yyyy-MM-dd HH:mm:ss")
+```
 
+#### 6.插入/更新  操作数据   
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### 
-
-
-
-
-
-
-
-
-
-
+编辑映射的字段，将输入的数据导入到目标数据表中
 
