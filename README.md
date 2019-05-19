@@ -12,9 +12,13 @@
 
 Kettle作为一个很方便的数据迁移工具，这里整理一下用法。
 
+### [FastDfs使用](docs/FastDfs_Use.md)
 
+关于FastDfs的搭建，可查看[FastDfs单机搭建](https://github.com/leekoko/Linux/blob/master/doc/FastDfs.md)。由于工作需求，我需要写一段自动化脚本将附件直接上传到网盘，并且拿到它的存储路径。  
 
+### [maven进阶用法](docs/maven-plus.md)  
 
+maven作为经常用到的工具，除了要了解[maven基础使用](docs/maven.md),还需要知道[maven的进阶用法](docs/component/maven-plus.md)。   
 
 
 
