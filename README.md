@@ -16,9 +16,26 @@ Kettle作为一个很方便的数据迁移工具，这里整理一下用法。
 
 关于FastDfs的搭建，可查看[FastDfs单机搭建](https://github.com/leekoko/Linux/blob/master/doc/FastDfs.md)。由于工作需求，我需要写一段自动化脚本将附件直接上传到网盘，并且拿到它的存储路径。  
 
-### [maven进阶用法](docs/maven-plus.md)  
+### [maven基础使用](docs/maven.md)    
 
-maven作为经常用到的工具，除了要了解[maven基础使用](docs/maven.md),还需要知道[maven的进阶用法](docs/component/maven-plus.md)。   
+maven作为经常用到的工具，进行进一步的梳理总结。   
+
+### IntelliJ IDEA
+
+idea做为平时工作常用的工具，多了解一些用法可以提高不少效率。关于idea的基础使用：
+
+- [IntelliJ IDEA（上）](doc/idea_A.md)       
+- [IntelliJ IDEA（中）](doc/idea_B.md)   
+
+idea的进一步探究：
+
+- [IDEA中Debug](docs/idea-debug.md)  
+
+
+
+
+
+
 
 
 
@@ -27,10 +44,6 @@ maven作为经常用到的工具，除了要了解[maven基础使用](docs/maven
 ### 1.[Git](doc/git.md)   
 
 ### 2.[Vimperator](doc/Vimperator.md)   
-
-### 5.[IntelliJ IDEA（上）](doc/idea_A.md)       
-
-### 6.[IntelliJ IDEA（中）](doc/idea_B.md)    
 
 ###     7.[Java代码规范](doc/javaStandard.md)     
 
@@ -43,13 +56,3 @@ maven作为经常用到的工具，除了要了解[maven基础使用](docs/maven
 
 
 
-
-
-
-
-
-
-
-微服务
-
-https://blog.csdn.net/GitChat/article/details/81328516

@@ -70,11 +70,11 @@ M：当修改一些参数，不想重启服务器，应该怎么做？
 
 Z：可以配置tomcat热部署。
 
-![](D:\github_place\itTools\imgs\id18.png)  
+![](..\imgs\id18.png)  
 
 修改了内容之后，将焦点挪出编辑框，即执行热部署。
 
-![](D:\github_place\itTools\imgs\id19.png)  
+![](..\imgs\id19.png)  
 
 M：但是这种配置对新增新成员（例如参数，方法）是不起效果的。
 
@@ -84,7 +84,7 @@ M：怎么离线安装JRebel插件呢？
 
 Z：点击设置，选择插件并导入即可  
 
-![](D:\github_place\itTools\imgs\id20.png)  
+![](..\imgs\id20.png)  
 
 JRebel下载地址：链接：https://pan.baidu.com/s/10Vlu2NJU-7TS7mpD_Jf65Q 密码：5imr   
 
@@ -104,15 +104,17 @@ Z：方法和普通tomcat部署没有太大区别
 
 3. 添加war项目需要选择war exploded  
 
-   ![](D:\github_place\itTools\imgs\id22.png)
+   ![](..\imgs\id22.png)
 
-4. 注意选择Update classes and resources
+4. 注意选择Update classes and resources   
 
-   ![](D:\github_place\itTools\imgs\id56.png)  
+   On frame deactivation指的是切换到浏览器时做什么事，一般选``do nothing``，避免占用资源
+
+   ![](..\imgs\id56.png)  
 
 5. 选择对应tomcat，点击JRebel 的Debug即可(JRebel启动比较慢)    
 
-   ![](D:\github_place\itTools\imgs\id57.png)  
+   ![](..\imgs\id57.png)  
 
 M：怎么进行加速呢？
 
@@ -128,7 +130,7 @@ M：我启动之后报错，``HTTP Status 500 - Request processing failed; neste
 
 Z：新版IntelliJ IDEA不会自动编译source folder下的xml文件，如果要实现编译，需要在其pom.xml中添加以下代码
 
-![](D:\github_place\itTools\imgs\id58.png)  
+![](..\imgs\id58.png)  
 
 ```xml
 	<!-- 如果不添加此节点mybatis的mapper.xml文件都会被漏掉。 -->
@@ -150,7 +152,7 @@ M：我部署之后，放在webapp下的静态资源访问不到，怎么办？
 
 Z：在发布项目的时候，静态资源也要指定发布，并且添加访问路径
 
-![](D:\github_place\itTools\imgs\id59.png)  
+![](..\imgs\id59.png)  
 
 ## idea管理数据库   
 
