@@ -45,13 +45,11 @@ idea的进一步探究：
 
 ### 2.[Vimperator](doc/Vimperator.md)   
 
-###     7.[Java代码规范](doc/javaStandard.md)     
-
 ### 8.[接口规范](doc/apiStandard.md)      
 
 ### 9.[ionic](doc/ionic.md)  
 
-### 10.[面试](InterView/readme.md)    
+
 
 
 
