@@ -19,12 +19,6 @@
 
 Junit还可以使用类似``Assert.assertEquals(52,result);``自动判断实际值和期待值是否一样，不用人为进行判断。
 
-
-
-loading
-
-
-
 ![](../imgs/junitA01.png)  
 
 M：为什么单元测试那么重要？
@@ -102,46 +96,7 @@ Z： 以下为暂时的图片，后期实际编码的时候再替换代码!!!!!!
 
 类名后面添加Test，方法名前面添加test   
 
-### Junit的Demo  
+## [Junit测试Spring容器](component/junit-spring.md)
 
-M：有没有相关的使用Demo流程呢？
-
-Z：
-
-1. pom中添加依赖
-
-   ```xml
-   	    <dependency>
-   	        <groupId>org.mockito</groupId>
-   	        <artifactId>mockito-all</artifactId>
-   	        <version>2.0.2-beta</version>
-   	    </dependency>
-   ```
-
-2. junit中引入静态包方法``import static org.mockito.Mockito.*;``   
-
-3. 简单案例
-
-   ```java
-   	@Test
-   	public void testInitCurYear(){
-           /* 创建 Mock 对象 */
-           List list = mock(List.class);
-           /* 设置预期，当调用 get(0) 方法时返回 "111" */
-           when(list.get(0)).thenReturn("111");
-
-           Assert.assertEquals("asd", 1, 1);
-           /* 设置后返回期望的结果 */
-           System.out.println(list.get(0));
-           /* 没有设置则返回 null */
-           System.out.println(list.get(1));
-
-           /* 验证返回结果 */
-           String ret = (String)list.get(0);
-           Assert.assertEquals(ret, "111");
-   		
-   	}
-   ```
-
-   ​
+一般情况下，涉及到Spring容器的，直接使用热加载真实环境测试就可以了。只是crud内容，，但当业务足够复杂，也可以通过注入容器的方式在Junit下测试Spring。
 
