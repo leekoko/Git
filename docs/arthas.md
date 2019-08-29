@@ -84,6 +84,8 @@ $ sc -d com.taobao.arthas.core.shell.system.impl.ProcessImpl
  classLoaderHash   74df479a
 ```
 
+也可以用``sc -d *MathGame``进行模糊匹配
+
 ## stack
 
 ``test.arthas.TestStack doGet`` ：查看方法的堆栈调用信息
@@ -169,3 +171,10 @@ Affect(class-cnt:1 , method-cnt:1) cost in 75 ms.
  1008    2018-09-20 09:54:18  0.18468   true    false    0x55965cca     DemoServiceImpl                sayHello
 ```
 
+
+
+
+
+
+
+更多记录：https://alibaba.github.io/arthas/arthas-tutorials?language=cn&id=arthas-advanced

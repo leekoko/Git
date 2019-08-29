@@ -33,25 +33,19 @@ idea做为平时工作常用的工具，多了解一些用法可以提高不少�
 
 idea的进一步探究：
 
-- [IDEA中Debug](docs/idea-debug.md)  
+- [IDEA中Debug](docs/idea-debug.md)    
+
+### [JetBrains DataGrip](docs/dataGrip.md)    
 
 
 
+### [Git](doc/git.md)   
+
+### [Vimperator](doc/Vimperator.md)   
+
+### [接口规范](doc/apiStandard.md)      
 
 
-
-
-
-
-===
-
-### 1.[Git](doc/git.md)   
-
-### 2.[Vimperator](doc/Vimperator.md)   
-
-### 8.[接口规范](doc/apiStandard.md)      
-
-### 9.[ionic](doc/ionic.md)  
 
 
 

@@ -38,7 +38,7 @@
 
    ![](../imgs/kettleA10.png)  
 
-   ​
+   
 
 6. 双击编辑表输出，填入目标表名    
 
@@ -139,4 +139,10 @@ var SYSTEM_DATE2 = date2str(DATE2,"yyyy-MM-dd HH:mm:ss")
 #### 6.插入/更新  操作数据   
 
 编辑映射的字段，将输入的数据导入到目标数据表中
+
+### 连接SQL Service数据库
+
+连接如下：
+
+![](../imgs/k07.png)  
 
